@@ -1,3 +1,10 @@
+
+const IS_PRODUCTION = true; // Passe à `false` en développement
+
+if (IS_PRODUCTION) {
+    console.log = console.warn = console.info = console.error = () => {};
+}
+
 let buttonCheckEnabled = false;
 
 function loadFontAwesome() {
@@ -165,8 +172,6 @@ function checkEmailContent(emailItem) {
             // Envoyer le contenu à un serveur Python
             sendEmailContentToServer(emailItem, emailText);
             window.history.back();
-        } else {
-            console.log('Contenu de l\'email introuvable');
         }
     }, 1000); // Timeout pour laisser Gmail charger l'email
 }
@@ -191,7 +196,6 @@ function sendEmailContentToServer(emailItem, emailText) {
                 return response.json();
             })
             .then(data => {
-                console.log('Réponse du serveur :', data);
                 // Vérifie si le message est dangereux ou non
                 if (data.analysis === 'false') {
                     emailItem.style.backgroundColor = 'rgb(168, 224, 20)'; // Si ce n'est pas dangereux
@@ -214,7 +218,7 @@ function sendEmailContentToServer(emailItem, emailText) {
                     });
                 }
             })
-            .catch(error => console.error('Erreur dans la requête:', error));
+
     } catch (error) {
         console.error('Erreur dans sendEmailContentToServer:', error);
     }

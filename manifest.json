@@ -2,18 +2,19 @@
     "manifest_version": 3,
     "name": "Gmail Email Checker",
     "version": "1.0",
-    "description": "Ajoute un bouton Check à côté de chaque email.",
     "permissions": [
-    "activeTab",
-    "scripting"
-],
-    "background": {
-    "service_worker": "background.js"
-},
+        "activeTab",
+        "scripting"
+    ],
     "content_scripts": [
-    {
-        "matches": ["https://mail.google.com/*"],
-        "js": ["contentScript.js"]
+        {
+            "matches": ["https://mail.google.com/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "icons": {
+        "16": "email.png",
+        "48": "email.png",
+        "128": "email.png"
     }
-]
 }
