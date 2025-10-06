@@ -41,9 +41,3 @@
 1. Ouvrez Gmail dans votre navigateur.  
 2. Sélectionnez un e-mail.  
 3. Cliquez sur le bouton **Check** ajouté par l'extension pour analyser l'e-mail.  
-
-## 📂 Structure du projet  
-- **`server.py`** : Serveur Flask pour le backend.  
-- **`chrome-extension/`** : Code source de l'extension Chrome.  
-- **`requirements.txt`** : Dépendances Python.  
-- **`README.md`** : Documentation du projet.  
