@@ -1,43 +1,68 @@
-# 📧 Phishing Email Analyzer  
+# 📧 Phishing Email Analyzer
 
-**Phishing Email Analyzer** est un outil conçu pour aider les utilisateurs à détecter les e-mails de phishing directement dans Gmail. Cette application combine une extension Chrome et un backend Flask, utilisant le modèle local **LLaMA 3** via **LM Studio** pour analyser les e-mails tout en préservant la confidentialité des données.  
+**Phishing Email Analyzer** is a tool designed to help users detect phishing emails directly within Gmail. This application combines a Chrome extension and a Flask backend, using the local **LLaMA 3** model via **LM Studio** to analyze emails while maintaining full data privacy.
 
-## ✨ Fonctionnalités  
-  🟢 Ajout d'un bouton "Check" dans Gmail pour analyser les e-mails.  
-  ✅ Les e-mails jugés sûrs sont colorés en **vert**, tandis que les e-mails dangereux sont colorés en **rouge**, avec un **popup explicatif**.  
-  🔒 Analyse locale via **LLaMA 3** avec **LM Studio**, garantissant confidentialité et sécurité.  
+## ✨ Features
 
-## 🛠️ Technologies utilisées  
-- **Backend** : [Flask](https://flask.palletsprojects.com/), [LangChain](https://www.langchain.com/), [LM Studio](https://lmstudio.ai/).  
-- **Frontend** : Extension Chrome intégrée à Gmail.  
+🟢 Adds a **"Check"** button in Gmail to analyze emails.
+✅ Emails marked as safe are highlighted in **green**, while suspicious ones are highlighted in **red**, with an **explanatory popup**.
+🔒 Local analysis using **LLaMA 3** through **LM Studio**, ensuring complete confidentiality and security.
 
-## ⚙️ Installation et configuration  
+## 🔧 Technologies Used
 
-### 1️⃣ Clonez le dépôt  
-1. Clonez le dépôt GitHub :  
-   `git clone https://github.com/syphaxlch/Phishing_Email_Analyzer.git`  
-2. Accédez au répertoire :  
-   `cd Phishing_Email_Analyzer`  
+* **Backend**: [Flask](https://flask.palletsprojects.com/), [LangChain](https://www.langchain.com/), [LM Studio](https://lmstudio.ai/).
+* **Frontend**: Chrome extension integrated with Gmail.
 
-### 2️⃣ Installez les dépendances backend  
-1. Installez les dépendances nécessaires avec la commande :  
-   `pip install -r requirements.txt`  
+## ⚙️ Installation and Setup
 
-### 3️⃣ Configurez LM Studio  
-1. Téléchargez et installez LM Studio depuis [https://lmstudio.ai/](https://lmstudio.ai/).  
-2. Importez le modèle **LLaMA 3** et assurez-vous qu'il fonctionne correctement.  
+### 1️⃣ Clone the Repository
 
-### 4️⃣ Lancez le backend Flask  
-1. Démarrez le serveur Flask avec la commande :  
-   `python server.py`  
+1. Clone the GitHub repository:
 
-### 5️⃣ Installez l'extension Chrome  
-1. Accédez à `chrome://extensions/` dans Google Chrome.  
-2. Activez le mode développeur.  
-3. Cliquez sur "Charger l'extension non empaquetée".  
-4. Sélectionnez le dossier `chrome-extension`.  
+   ```bash
+   git clone https://github.com/syphaxlch/Phishing_Email_Analyzer.git
+   ```
+2. Navigate to the directory:
 
-### 6️⃣ Testez l'outil  
-1. Ouvrez Gmail dans votre navigateur.  
-2. Sélectionnez un e-mail.  
-3. Cliquez sur le bouton **Check** ajouté par l'extension pour analyser l'e-mail.  
+   ```bash
+   cd Email_Analysis_with_LLM
+   ```
+
+### 2️⃣ Install Backend Dependencies
+
+Install the required Python dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3️⃣ Set Up LM Studio
+
+1. Download and install **LM Studio** from [https://lmstudio.ai/](https://lmstudio.ai/).
+2. Import the **LLaMA 3** model and ensure it runs correctly.
+
+### 4️⃣ Run the Flask Backend
+
+Start the Flask server using:
+
+```bash
+python server.py
+```
+
+### 5️⃣ Install the Chrome Extension
+
+1. Go to `chrome://extensions/` in your Chrome browser.
+2. Enable **Developer Mode**.
+3. Click on **Load unpacked**.
+4. Select the `chrome-extension` folder.
+
+### 6️⃣ Test the Tool
+
+1. Open **Gmail** in your browser.
+2. Select an email.
+3. Click the **Check** button added by the extension to analyze the email.
+
+## 🎬 Demo / Visual Preview
+
+[Watch the demo video](https://syphax-lc.vercel.app/llm-demo.mp4) to see **Phishing Email Analyzer** in action — de l’analyse d’e-mails à l’affichage du résultat via l’extension Gmail.
+
